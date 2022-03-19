@@ -29,6 +29,10 @@ export class ImageService {
   }
 
   getPostImage(postId: number): Observable<any> {
-    return this.httpclient.get( IMAGE_API + '/' + postId + '/image');
+    return this.httpclient.get(IMAGE_API + '/' + postId + '/image');
+  }
+
+  getMessageImage(messageId: number): Observable<any> {
+      return this.httpclient.get( IMAGE_API + '/' + messageId + '/image');
   }
 }

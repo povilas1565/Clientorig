@@ -19,14 +19,9 @@
   color: grey;
 }
 
-.phone-card {
-  display: block;
-  margin: 3rem auto;
-  width: 100%;
-}
 
 .message-card {
   display: block;
   margin: 3rem auto;
-  width: 50%;
+  width: 60%;
 }

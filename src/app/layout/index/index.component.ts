@@ -19,8 +19,8 @@ export class IndexComponent implements OnInit {
   user!: User;
   posts!: Post[];
   messages!: Message[];
-  isPostLoaded = false;
-  isMessageLoaded = false;
+  isPostsLoaded = false;
+  isMessagesLoaded = false;
   isUserDataLoaded = false;
 
   constructor(
@@ -49,7 +49,7 @@ export class IndexComponent implements OnInit {
         this.getImagesForPosts(this.posts);
         this.getVideoForPosts(this.posts);
         this.getCommentForPosts(this.posts);
-        this.isPostLoaded = true;
+        this.isPostsLoaded = true;
       });
 
     this.messageService.getAllMessages()
@@ -57,7 +57,7 @@ export class IndexComponent implements OnInit {
         console.log(messageData);
         this.messages = messageData;
         this.getImagesForMessages(this.messages);
-        this.isMessageLoaded = true;
+        this.isMessagesLoaded = true;
       });
   }
 

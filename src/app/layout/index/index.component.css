@@ -19,9 +19,8 @@
   color: grey;
 }
 
-
 .message-card {
   display: block;
   margin: 3rem auto;
-  width: 60%;
+  width: 80%;
 }

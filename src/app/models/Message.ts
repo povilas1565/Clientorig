@@ -3,7 +3,6 @@ export interface Message {
   message: string;
   username: string;
   title: string;
-  caption: string;
   location:string;
   image?: File;
 }

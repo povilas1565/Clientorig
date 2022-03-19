@@ -63,7 +63,7 @@ export class IndexComponent implements OnInit {
 
   getImagesForPosts(posts: Post[]): void {
     posts.forEach(post => {
-      this.imageService.getPostImage(post.id!)
+      this.imageService.getPostImg(post.id!)
         .subscribe(imageData => {
           post.image = imageData.imageBytes;
         })
@@ -72,7 +72,7 @@ export class IndexComponent implements OnInit {
 
   getVideoForPosts(posts: Post[]): void {
     posts.forEach(post => {
-      this.videoService.getPostVideo(post.id!)
+      this.videoService.getPostVid(post.id!)
         .subscribe(videoData => {
           post.video = videoData.videoBytes;
         })
@@ -90,7 +90,7 @@ export class IndexComponent implements OnInit {
 
   getImagesForMessages(messages: Message[]): void {
     messages.forEach(message => {
-      this.imageService.getMessageImage(message.id!)
+      this.imageService.getMessageImg(message.id!)
         .subscribe(imageData => {
           message.image = imageData.imagebytes;
         })

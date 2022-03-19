@@ -18,9 +18,6 @@ import { EditProfileComponent } from './user/edit-profile/edit-profile.component
 import { AddPostComponent } from './user/add-post/add-post.component';
 import { UserMessagesComponent } from './user/user-messages/user-messages.component';
 import { AddMessageComponent } from './user/add-message/add-message.component';
-import { UserPhonesComponent } from './user/user-phones/user-phones.component';
-import { AddPhoneComponent } from './user/add-phone/add-phone.component';
-
 
 @NgModule({
   declarations: [
@@ -35,8 +32,6 @@ import { AddPhoneComponent } from './user/add-phone/add-phone.component';
     AddPostComponent,
     UserMessagesComponent,
     AddMessageComponent,
-    UserPhonesComponent,
-    AddPhoneComponent
   ],
   imports: [
     BrowserModule,

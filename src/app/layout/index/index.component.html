@@ -7,7 +7,7 @@
               <mat-card-subtitle>{{message.location}}</mat-card-subtitle>
             </mat-card-header>
 
-  <image mat-card-image[src]="formatImage(message.image)" alt="message image"></image>
+  <img mat-card-image[src]="formatImage(message.image)" alt="message image">
 
     <mat-card-subtitle align="start">Messaged by {{message.username}}</mat-card-subtitle>
 
@@ -19,7 +19,7 @@
       <mat-card-subtitle>{{post.location}}</mat-card-subtitle>
     </mat-card-header>
 
-      <image mat-card-image[src]="formatImage(post.image)" alt="post image"></image>
+      <img mat-card-image[src]="formatImage(post.image)" alt="post image">
 
       <video mat-card-video[src]="formatVideo(post.video)" alt="post video"></video>
 
@@ -53,6 +53,4 @@
     </mat-card>
   </mat-card>
 </div>
-
-
 

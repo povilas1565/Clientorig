@@ -97,18 +97,18 @@ export class IndexComponent implements OnInit {
     });
   }
 
-  formatImage(image: any): any {
-    if (image == null) {
+  formatImage(img: any): any {
+    if (img == null) {
       return null;
     }
-    return 'data:image/jpeg;base64,' + image;
+    return 'data:image/jpeg;base64,' + img;
   }
 
-  formatVideo(video: any): any {
-    if (video == null) {
+  formatVideo(vid: any): any {
+    if (vid == null) {
       return null;
     }
-    return 'data:video/avi;mp4,' + video;
+    return 'data:video/avi;mp4,' + vid;
   }
 
   likePost(postId: number, postIndex: number): void {

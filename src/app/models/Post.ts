@@ -6,10 +6,10 @@ export interface Post {
   caption: string;
   location:string;
   image?: File;
-  video?:File;
+  video?: File;
   likes?: number;
   userLiked?: string[];
-  likedUsers?: string[];
+  likedUsers?: Post[];
   comments?: Comment[];
   username?: string;
 }

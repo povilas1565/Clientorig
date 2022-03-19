@@ -1,7 +1,6 @@
 import {Comment} from "./Comment";
 
 export interface Post {
-  likedUsers?: string[];
   id?: number;
   title: string;
   caption: string;
@@ -10,6 +9,7 @@ export interface Post {
   video?:File;
   likes?: number;
   userLiked?: string[];
+  likedUsers?: string[];
   comments?: Comment[];
   username?: string;
 }

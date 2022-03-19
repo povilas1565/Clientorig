@@ -118,6 +118,12 @@ export class IndexComponent implements OnInit {
     if (!post.likedUsers?.includes(this.user.username)) {
       this.postService.likePost(postId, this.user.username)
         .subscribe(() => {
+          post.likedUsers?.push(this.user.username);
+          this.notificationService.showSnackBar("Liked")
+        });
+    } else {
+      this.postService.likePost(postId, this.user.username)
+        .subscribe(() => {
           const index = post.likedUsers?.indexOf(this.user.username, 0);
           if (index! > -1) {
             post.likedUsers?.splice(index!, 1);

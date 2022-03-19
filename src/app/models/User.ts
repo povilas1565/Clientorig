@@ -4,7 +4,6 @@ export interface User {
   firstname: string;
   lastname: string;
   email: string;
-  info:string;
+  info: string;
   message: string;
-  phone?:File;
 }

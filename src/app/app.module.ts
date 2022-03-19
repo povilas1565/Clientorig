@@ -11,6 +11,15 @@ import {authErrorInterceptorProviders} from "./helper/error-interceptor.service"
 import { LoginComponent } from './auth/login/login.component';
 import { RegisterComponent } from './auth/register/register.component';
 import { NavigationComponent } from './layout/navigation/navigation.component';
+import { IndexComponent } from './layout/index/index.component';
+import { ProfileComponent } from './user/profile/profile.component';
+import { UserPostsComponent } from './user/user-posts/user-posts.component';
+import { EditProfileComponent } from './user/edit-profile/edit-profile.component';
+import { AddPostComponent } from './user/add-post/add-post.component';
+import { UserMessagesComponent } from './user/user-messages/user-messages.component';
+import { AddMessageComponent } from './user/add-message/add-message.component';
+import { UserPhonesComponent } from './user/user-phones/user-phones.component';
+import { AddPhoneComponent } from './user/add-phone/add-phone.component';
 
 
 @NgModule({
@@ -18,7 +27,16 @@ import { NavigationComponent } from './layout/navigation/navigation.component';
     AppComponent,
     LoginComponent,
     RegisterComponent,
-    NavigationComponent
+    NavigationComponent,
+    IndexComponent,
+    ProfileComponent,
+    UserPostsComponent,
+    EditProfileComponent,
+    AddPostComponent,
+    UserMessagesComponent,
+    AddMessageComponent,
+    UserPhonesComponent,
+    AddPhoneComponent
   ],
   imports: [
     BrowserModule,
@@ -33,4 +51,5 @@ import { NavigationComponent } from './layout/navigation/navigation.component';
     authErrorInterceptorProviders],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

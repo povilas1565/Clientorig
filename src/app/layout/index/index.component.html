@@ -1,4 +1,4 @@
-<div *ngIf="isMessagesLoaded && isPostsLoaded && isUserDataLoaded" class="index-page">
+<div *ngIf="isMessagesDataLoaded && isPostsLoaded && isUserDataLoaded" class="index-page">
 
   <mat-card class="message-card" *ngFor="let message of messages; let i = index">
             <mat-card-header style="...">
@@ -6,8 +6,6 @@
               <mat-card-title>{{message.title}}</mat-card-title>mat-card-title>
               <mat-card-subtitle>{{message.location}}</mat-card-subtitle>
             </mat-card-header>
-
-  <img mat-card-image[src]="formatImage(message.image)" alt="message image">
 
     <mat-card-subtitle align="start">Messaged by {{message.username}}</mat-card-subtitle>
 

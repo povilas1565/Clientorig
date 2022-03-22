@@ -3,6 +3,5 @@ export interface Message {
   message: string;
   username: string;
   title: string;
-  location:string;
-  image?: File;
+  location: string;
 }

@@ -20,7 +20,7 @@ export class IndexComponent implements OnInit {
   posts!: Post[];
   messages!: Message[];
   isPostsLoaded = false;
-  isMessagesLoaded = false;
+  isMessagesDataLoaded = false;
   isUserDataLoaded = false;
 
   constructor(
@@ -56,8 +56,7 @@ export class IndexComponent implements OnInit {
       .subscribe(messageData => {
         console.log(messageData);
         this.messages = messageData;
-        this.getImagesForMessages(this.messages);
-        this.isMessagesLoaded = true;
+        this.isMessagesDataLoaded = true;
       });
   }
 
@@ -84,15 +83,6 @@ export class IndexComponent implements OnInit {
       this.commentService.getCommentForPost(post.id!)
         .subscribe(commentData => {
           post.comments = commentData;
-        })
-    });
-  }
-
-  getImagesForMessages(messages: Message[]): void {
-    messages.forEach(message => {
-      this.imageService.getMessageImg(message.id!)
-        .subscribe(imageData => {
-          message.image = imageData.imagebytes;
         })
     });
   }

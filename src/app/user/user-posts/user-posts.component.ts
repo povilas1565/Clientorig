@@ -98,6 +98,4 @@ export class UserPostsComponent implements OnInit {
     return 'data:video/avi;mp4,' + vid;
   }
 
-
-
 }

@@ -21,7 +21,11 @@ export class MessageService {
     return this.httpclient.get( MESSAGE_API + 'all');
   }
 
-  getAllMessagesForCurrentUser(): Observable<any> {
+  getMessagesForCurrentUser(): Observable<any> {
     return this.httpclient.get(MESSAGE_API + 'user/messages');
+  }
+
+  deleteMessage(id: number): Observable<any> {
+    return this.httpclient.get(MESSAGE_API + id + '/delete', null);
   }
 }

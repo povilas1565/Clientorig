@@ -20,7 +20,7 @@ export class IndexComponent implements OnInit {
   posts!: Post[];
   messages!: Message[];
   isPostsLoaded = false;
-  isMessagesDataLoaded = false;
+  isMessagesLoaded = false;
   isUserDataLoaded = false;
 
   constructor(
@@ -56,7 +56,7 @@ export class IndexComponent implements OnInit {
       .subscribe(messageData => {
         console.log(messageData);
         this.messages = messageData;
-        this.isMessagesDataLoaded = true;
+        this.isMessagesLoaded = true;
       });
   }
 

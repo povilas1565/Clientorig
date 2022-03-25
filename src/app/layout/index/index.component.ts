@@ -47,8 +47,8 @@ export class IndexComponent implements OnInit {
         console.log(postData);
         this.posts = postData;
         this.getImagesForPosts(this.posts);
-        this.getVideoForPosts(this.posts);
-        this.getCommentForPosts(this.posts);
+        this.getVideosForPosts(this.posts);
+        this.getCommentsForPosts(this.posts);
         this.isPostsLoaded = true;
       });
 
@@ -69,7 +69,7 @@ export class IndexComponent implements OnInit {
     });
   }
 
-  getVideoForPosts(posts: Post[]): void {
+  getVideosForPosts(posts: Post[]): void {
     posts.forEach(post => {
       this.videoService.getPostVid(post.id!)
         .subscribe(videoData => {
@@ -78,9 +78,9 @@ export class IndexComponent implements OnInit {
     });
   }
 
-  getCommentForPosts(posts: Post[]): void {
+  getCommentsForPosts(posts: Post[]): void {
     posts.forEach(post => {
-      this.commentService.getCommentForPost(post.id!)
+      this.commentService.getCommentsForPost(post.id!)
         .subscribe(commentData => {
           post.comments = commentData;
         })

@@ -22,7 +22,7 @@ export class PostService {
     return this.httpclient.get(POST_API + 'user/posts');
   }
 
-  delete(id: number): Observable<any> {
+  deletePost(id: number): Observable<any> {
     return this.httpclient.post(POST_API + id + '/delete', null);
   }
 

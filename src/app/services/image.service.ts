@@ -12,27 +12,23 @@ export class ImageService {
 
   uploadImgToProfile(file: File): Observable<any> {
     const uploadData = new FormData();
-    uploadData.append( 'file', file);
+    uploadData.append('file', file);
 
-    return this.httpclient.post( IMAGE_API + '/upload', uploadData);
+    return this.httpclient.post(IMAGE_API + '/upload', uploadData);
   }
 
   uploadImgToPost(file: File, postId: number): Observable<any> {
     const uploadData = new FormData();
-    uploadData.append( 'file', file);
+    uploadData.append('file', file);
 
-    return this.httpclient.post( IMAGE_API + '/' + postId + '/upload', uploadData);
+    return this.httpclient.post(IMAGE_API + '/' + postId + '/upload', uploadData);
   }
 
   getUserProfileImg(): Observable<any> {
-    return this.httpclient.get( IMAGE_API + '/profileImage');
+    return this.httpclient.get(IMAGE_API + '/profileImage');
   }
 
   getPostImg(postId: number): Observable<any> {
     return this.httpclient.get(IMAGE_API + '/' + postId + '/image');
-  }
-
-  getMessageImg(messageId: number): Observable<any> {
-      return this.httpclient.get( IMAGE_API + '/' + messageId + '/image');
   }
 }

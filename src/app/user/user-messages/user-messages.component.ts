@@ -18,7 +18,7 @@ export class UserMessagesComponent implements OnInit {
 
   deleteMessage(message: Message, index: number): void {
     console.log(message);
-    const result = confirm ('Do you want remove this post?');
+    const result = confirm ('Do you want remove this message?');
     if (result) {
       this.messageService.deleteMessage(message.id)
         .subscribe(() => {

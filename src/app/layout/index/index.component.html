@@ -9,6 +9,9 @@
             </mat-card-header>
 
     <mat-card-subtitle align="start">Messaged by {{message.username}}</mat-card-subtitle>
+    <mat-card-content>
+      <p>{{message.caption}}</p>
+    </mat-card-content>
 
 
     <mat-card class="post-card" *ngFor="let post of posts; let i = index">
@@ -20,7 +23,7 @@
 
       <img mat-card-image[src]="formatImage(post.image)" alt="post image">
 
-      <video mat-card-video[src]="formatVideo(post.video)" alt="post video"></video>
+      <vid mat-card-video[src]="formatVideo(post.video)" alt="post video"></vid>
 
           <mat-card-subtitle align="start">Posted by {{post.username}}</mat-card-subtitle>
 

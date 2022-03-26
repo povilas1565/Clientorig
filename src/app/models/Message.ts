@@ -4,4 +4,5 @@ export interface Message {
   username: string;
   title: string;
   location: string;
+  caption: string;
 }

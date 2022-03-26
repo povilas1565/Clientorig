@@ -24,11 +24,11 @@ export class VideoService {
     return this.httpclient.post( VIDEO_API + '/' + postId + '/upload', uploadData);
   }
 
-  getUserProfileVid(): Observable<any> {
+  getUserProfileVideo(): Observable<any> {
     return this.httpclient.get( VIDEO_API + '/profileVideo');
   }
 
-  getPostVid(postId: number): Observable<any> {
+  getPostVideo(postId: number): Observable<any> {
     return this.httpclient.get( VIDEO_API + '/' + postId + '/video');
   }
 }

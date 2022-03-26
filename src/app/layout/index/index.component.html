@@ -23,7 +23,7 @@
 
       <img mat-card-image[src]="formatImage(post.image)" alt="post image">
 
-      <vid mat-card-video[src]="formatVideo(post.video)" alt="post video"></vid>
+      <video mat-card-video[src]="formatVideo(post.video)" alt="post video">
 
           <mat-card-subtitle align="start">Posted by {{post.username}}</mat-card-subtitle>
 
@@ -52,6 +52,7 @@
       <mat-hint align="end">{{comment.value.length}} / 128</mat-hint>
     </mat-form-field>
 
+      </video>
     </mat-card>
   </mat-card>
 </div>

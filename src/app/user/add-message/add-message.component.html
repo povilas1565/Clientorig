@@ -1,1 +1,42 @@
-<p>add-message works!</p>
+<div>
+  <div style="text-align: right">
+    <button mat-flat-button color="primary" routerLink="/profile">My messages</button>
+  </div>
+
+  <h2>Create Message</h2>
+  <form [formGroup]="messageEditForm">
+    <div>
+      <div style="text-align: right">
+        <button mat-flat-button color="primary" routerLink="/profile">My messages</button>
+      </div>
+
+        <mat-form-field class="w-100" appearance="outline">
+          <mat-label>Title</mat-label>
+          <input matInput
+                 formControlName="title">
+        </mat-form-field>
+
+        <mat-form-field class="w-100" appearance="outline">
+          <mat-label>Title</mat-label>
+          <input matInput
+                 formControlName="caption">
+        </mat-form-field>
+
+        <mat-form-field class="w-100" appearance="outline">
+          <mat-label>Title</mat-label>
+          <input matInput
+                 formControlName="location">
+        </mat-form-field>
+
+        <div style="text-align: right">
+          <button mat-flat-button color="primary" [disabled]="messageEditForm.invalid" (click)="submitMessageDate()">
+            Create Message
+          </button>
+        </div>
+       </div>
+      </form>
+    </div>
+
+
+
+

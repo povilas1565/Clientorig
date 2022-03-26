@@ -19,7 +19,7 @@ export class AddPostComponent implements OnInit {
   public isPostCreated = false;
   public createdPost: Post;
   public previewImageUrl: any;
-  public previewVideoUrl: any;
+
 
   constructor(private formBuilder: FormBuilder,
               private notificationService: NotificationService,
@@ -76,7 +76,6 @@ export class AddPostComponent implements OnInit {
     reader.readAsDataURL(this.selectedFile);
     reader.onload = () => {
       this.previewImageUrl = reader.result;
-      this.previewVideoUrl = reader.result;
     };
   }
 }

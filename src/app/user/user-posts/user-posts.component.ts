@@ -34,7 +34,7 @@ export class UserPostsComponent implements OnInit {
 
   getVideosForPost(posts: Post[]): void {
     posts.forEach(post => {
-      this.videoService.getPostVid(post.id)
+      this.videoService.getPostVideo(post.id)
         .subscribe(data => {
           post.video = data.videoBytes;
         });

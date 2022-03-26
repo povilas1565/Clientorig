@@ -71,7 +71,7 @@ export class IndexComponent implements OnInit {
 
   getVideosForPosts(posts: Post[]): void {
     posts.forEach(post => {
-      this.videoService.getPostVid(post.id!)
+      this.videoService.getPostVideo(post.id!)
         .subscribe(videoData => {
           post.video = videoData.videoBytes;
         })

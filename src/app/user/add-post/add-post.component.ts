@@ -60,7 +60,7 @@ export class AddPostComponent implements OnInit {
         }
 
         if (this.createdPost.id ! == null) {
-          this.videoService.uploadVidToPost(this.selectedFile, this.createdPost.id)
+          this.videoService.uploadVideoToPost(this.selectedFile, this.createdPost.id)
             .subscribe(() => {
               this.notificationService.showSnackBar('Post was created');
               this.isPostCreated = true;

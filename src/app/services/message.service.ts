@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
-const MESSAGE_API = 'http://localhost:8080/api/message';
+const MESSAGE_API = 'http://localhost:8080/api/message/';
 @Injectable({
   providedIn: 'root'
 })

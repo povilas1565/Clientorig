@@ -20,7 +20,7 @@ export class LoginComponent implements OnInit {
               private formBuilder: FormBuilder
   )  {
     if (this.tokenService.getUser()) {
-      this.router.navigate(['main']);
+      this.router.navigate(['/main']);
     }
   }
   createLoginForm(): FormGroup {
@@ -52,5 +52,4 @@ export class LoginComponent implements OnInit {
       this.notificationService.showSnackBar('Incorrect login or password' + error.message);
     });
   }
-
 }

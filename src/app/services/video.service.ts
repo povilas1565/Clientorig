@@ -10,14 +10,14 @@ export class VideoService {
   constructor(private httpclient: HttpClient) {
   }
 
-  uploadVidToProfile(file: File): Observable<any> {
+  uploadVideoToProfile(file: File): Observable<any> {
     const uploadData = new FormData();
     uploadData.append( 'file', file);
 
     return this.httpclient.post( VIDEO_API + '/upload', uploadData);
   }
 
-  uploadVidToPost(file: File, postId: number): Observable<any> {
+  uploadVideoToPost(file: File, postId: number): Observable<any> {
     const uploadData = new FormData();
     uploadData.append('file', file);
 

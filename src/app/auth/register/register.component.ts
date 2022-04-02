@@ -20,7 +20,7 @@ export class RegisterComponent implements OnInit {
               private formBuilder: FormBuilder) {
 
     if (this.tokenService.getUser()) {
-      this.router.navigate(['index'])
+      this.router.navigate(['/main'])
     }
   }
 
@@ -52,7 +52,7 @@ export class RegisterComponent implements OnInit {
         this.tokenService.saveToken(data.token);
         this.tokenService.saveUser(data);
         this.notificationService.showSnackBar('Successful authorization');
-        this.router.navigate(['/']);
+        this.router.navigate(['/index']);
         window.location.reload();
       }
       , error => {

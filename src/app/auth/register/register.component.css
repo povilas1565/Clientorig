@@ -1,4 +1,8 @@
-.login-page {
+mat-form-field {
+  width: 30%;
+}
+
+.register-page {
   text-align: center;
   margin-top: 10rem;
 }

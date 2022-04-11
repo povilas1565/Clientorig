@@ -20,7 +20,7 @@ export class RegisterComponent implements OnInit {
               private formBuilder: FormBuilder) {
 
     if (this.tokenService.getUser()) {
-      this.router.navigate(['/main'])
+      this.router.navigate(['/index'])
     }
   }
 

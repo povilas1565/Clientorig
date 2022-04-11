@@ -13,11 +13,11 @@ export class AuthDefenderService {
   }
 
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
-
+    // существует ли пользователь?
     if (this.tokenService.getUser()) {
       return true;
     }
-
+    // иначе - не пускать
     this.router.navigate(['login'],{queryParams: {returnUrl: state.url}});
     return false;
 }

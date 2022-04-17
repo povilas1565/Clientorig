@@ -48,8 +48,8 @@ export class LoginComponent implements OnInit {
       this.router.navigate(['/index']);
       window.location.reload();
     },error => {
-      console.log(error);
-      this.notificationService.showSnackBar('Incorrect login or password' + error.message);
-    });
+        console.log(error);
+        this.notificationService.showSnackBar('Incorrect login or password' + error.message);
+      });
   }
 }

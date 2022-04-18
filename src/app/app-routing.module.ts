@@ -18,7 +18,7 @@ const routes: Routes = [
     path: 'profile', component: ProfileComponent, canActivate: [AuthDefenderService],
     children: [
       {path: '', component: UserPostsComponent, canActivate: [AuthDefenderService]},
-      {path: 'm', component: UserMessagesComponent, canActivate: [AuthDefenderService]},
+      {path: '', component: UserMessagesComponent, canActivate: [AuthDefenderService]},
       {path: 'add-post', component: AddPostComponent, canActivate: [AuthDefenderService]},
       {path: 'add-message', component: AddMessageComponent, canActivate: [AuthDefenderService]}
     ]

@@ -12,9 +12,9 @@ export class VideoService {
 
   uploadVideoToProfile(file: File): Observable<any> {
     const uploadData = new FormData();
-    uploadData.append( 'file', file);
+    uploadData.append('file', file);
 
-    return this.httpclient.post( VIDEO_API + '/upload', uploadData);
+    return this.httpclient.post(VIDEO_API + '/upload', uploadData);
   }
 
   uploadVideoToPost(file: File, postId: number): Observable<any> {
@@ -25,11 +25,11 @@ export class VideoService {
   }
 
   getUserProfileVideo(): Observable<any> {
-    return this.httpclient.get( VIDEO_API + '/profileVideo');
+    return this.httpclient.get(VIDEO_API + '/profileVideo');
   }
 
   getPostVideo(postId: number): Observable<any> {
-    return this.httpclient.get( VIDEO_API + '/' + postId + '/video');
+    return this.httpclient.get(VIDEO_API + '/' + postId + '/video');
   }
 }
 

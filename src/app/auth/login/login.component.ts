@@ -46,8 +46,8 @@ export class LoginComponent implements OnInit {
 
       this.notificationService.showSnackBar('Successful authorization');
       this.router.navigate(['/index']);
-      window.location.reload();
-    },error => {
+    }
+    ,error => {
         console.log(error);
         this.notificationService.showSnackBar('Incorrect login or password' + error.message);
       });

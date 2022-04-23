@@ -3,8 +3,7 @@
 
   <h2>Sign in</h2>
 
-
-  <form [formGroup]="loginForm">
+  <form [FormGroup]="loginForm">
 
     <div class="justify-content-center">
       <div>
@@ -30,7 +29,6 @@
                 [disabled]="loginForm.invalid"
                 (click)="submitDataToServer()"
                 mat-flat-button color="primary">
-
           Sign in
         </button>
 

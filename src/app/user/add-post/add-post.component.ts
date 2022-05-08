@@ -50,7 +50,7 @@ export class AddPostComponent implements OnInit {
         this.createdPost = postData;
         console.log(postData);
 
-        if (this.createdPost.id ! == null) {
+        if (this.createdPost.id != null) {
           this.imageService.uploadImgToPost(this.selectedFile, this.createdPost.id)
             .subscribe(() => {
               this.notificationService.showSnackBar('Post was created');
@@ -58,8 +58,7 @@ export class AddPostComponent implements OnInit {
               this.router.navigate(['/profile']);
             });
         }
-
-        if (this.createdPost.id ! == null) {
+        if (this.createdPost.id != null) {
           this.videoService.uploadVideoToPost(this.selectedFile, this.createdPost.id)
             .subscribe(() => {
               this.notificationService.showSnackBar('Post was created');

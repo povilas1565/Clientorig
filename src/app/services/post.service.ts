@@ -27,6 +27,6 @@ export class PostService {
   }
 
   likePost(id: number, username: string): Observable<any> {
-    return this.httpclient.post(POST_API + id + '/' + username +'like', null);
+    return this.httpclient.post(POST_API + id + '/' + username + '/like', null);
   }
 }

@@ -16,6 +16,15 @@ export class UserMessagesComponent implements OnInit {
               private notificationService: NotificationService) {
   }
 
+  ngOnInit(): void {
+    this.messageService.getMessagesForCurrentUser()
+      .subscribe(data => {
+        console.log(data);
+        this.messages = data;
+        this.isMessagesLoaded = true;
+      });
+  }
+
   deleteMessage(message: Message, index: number): void {
     console.log(message);
     const result = confirm ('Do you want remove this message?');
@@ -27,15 +36,12 @@ export class UserMessagesComponent implements OnInit {
         });
     }
   }
+}
 
-  ngOnInit(): void {
-    this.messageService.getMessagesForCurrentUser()
-      .subscribe(data => {
-        console.log(data);
-        this.messages = data;
-        this.isMessagesLoaded = true;
-      });
-  }
-  }
+
+
+
+
+
 
 

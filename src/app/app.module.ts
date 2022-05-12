@@ -18,6 +18,7 @@ import { EditProfileComponent } from './user/edit-profile/edit-profile.component
 import { AddPostComponent } from './user/add-post/add-post.component';
 import { UserMessagesComponent } from './user/user-messages/user-messages.component';
 import { AddMessageComponent } from './user/add-message/add-message.component';
+import { CommonModule } from '@angular/common';
 
 
 @NgModule({
@@ -36,6 +37,7 @@ import { AddMessageComponent } from './user/add-message/add-message.component';
   ],
   imports: [
     BrowserModule,
+    CommonModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,

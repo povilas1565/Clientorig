@@ -1,7 +1,7 @@
 import {Comment} from "./Comment";
 
 export interface Post {
-  likedUsers: any;
+  likedUsers?: string[];
   id?: number;
   title: string;
   caption: string;

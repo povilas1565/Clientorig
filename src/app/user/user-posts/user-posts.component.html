@@ -7,20 +7,22 @@
 
 <mat-card class="post-card" *ngFor="let post of posts; let i = index">
   <mat-card-header style="text-align: left">
+
     <div mat-card-avatar class="example-header-image"></div>
-    <div mat-card-header class="example-header-video"></div>
+    <div mat-card-avatar class="example-header-video"></div>
     <mat-card-title>{{post.title}}</mat-card-title>
-    <mat-card-subtitle>{{post.location}}</mat-card-subtitle>
+    <mat-card-subtitle> {{post.location}} </mat-card-subtitle>
   </mat-card-header>
-  <img mat-card-image[src]="formatImage(post.image)" alt="post.image">
-  <video mat-card-video[src]="formatVideo(post.video)" alt="post.video"></video>
+
+  <img mat-card-image [src]="formatImage(post.image)" alt="post.image" >
+  <video mat-card-video [src]="formatVideo(post.video)" alt="post.video"></video>
 <mat-card-content>
   <p>
     {{post.caption}}
   </p>
 </mat-card-content>
 
-<div style="text-align: left">
+<div style="...">
   <p *ngFor="let comment of post.comments; let c = index"><span style="font-weight: 500">{{comment.username}}</span>:{{comment.message}}
     <button color="accent" mat-button (click)="deleteComment(comment.id, i, c)">
       <mat-icon color="accent">clear</mat-icon>
@@ -29,7 +31,7 @@
 </div>
 
 <mat-card-actions align="end">
-  <button color="warn" mat-button (click)="deletePost(post,i)">
+  <button color="warn" mat-button (click)="deletePost(post, i)">
     <mat-icon color="warn">delete</mat-icon>
     Delete post
   </button>

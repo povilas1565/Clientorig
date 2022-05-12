@@ -58,6 +58,7 @@ export class AddPostComponent implements OnInit {
               this.router.navigate(['/profile']);
             });
         }
+
         if (this.createdPost.id != null) {
           this.videoService.uploadVideoToPost(this.selectedFile, this.createdPost.id)
             .subscribe(() => {

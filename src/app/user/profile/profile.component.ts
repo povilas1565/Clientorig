@@ -49,7 +49,7 @@ export class ProfileComponent implements OnInit {
   }
 
   onFileSelected(event: any): void {
-    this.selectedFile = event.target.file[0];
+    this.selectedFile = event.target.files[0];
     const reader = new FileReader();
     reader.readAsDataURL(this.selectedFile);
     reader.onload = () => {

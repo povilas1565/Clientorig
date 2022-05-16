@@ -31,6 +31,7 @@ export class IndexComponent implements OnInit {
     private videoService: VideoService,
     private messageService: MessageService,
     private notificationService: NotificationService
+
   ) {
   }
 
@@ -87,6 +88,7 @@ export class IndexComponent implements OnInit {
     });
   }
 
+
   formatImage(img: any): any {
     if (img == null) {
       return null;
@@ -94,12 +96,14 @@ export class IndexComponent implements OnInit {
     return 'data:image/jpeg;base64,' + img;
   }
 
-  formatVideo(vid: any): any {
-    if (vid == null) {
+  formatVideo(video: any): any {
+    if (video == null) {
       return null;
     }
-    return 'data:video/avi;mp4,' + vid;
+    return 'data:video/avi;mp4,' + video;
   }
+
+
 
   likePost(postId: number, postIndex: number): void {
     const post = this.posts[postIndex];

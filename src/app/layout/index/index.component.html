@@ -5,25 +5,25 @@
               <div mat-card-avatar class="example-header-image"></div>div>
               <mat-card-title>{{message.title}}</mat-card-title>mat-card-title>
               <mat-card-subtitle>{{message.location}}</mat-card-subtitle>
-
             </mat-card-header>
+
 
     <mat-card-subtitle align="start">Messaged by {{message.username}}</mat-card-subtitle>
     <mat-card-content>
       <p>{{message.caption}}</p>
     </mat-card-content>
-
+  </mat-card>
 
     <mat-card class="post-card" *ngFor="let post of posts; let i = index">
     <mat-card-header style="...">
-      <div mat-card-avatar class="example-header-image"></div>div>
-      <mat-card-title>{{post.title}}</mat-card-title>mat-card-title>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>{{post.title}}</mat-card-title>
       <mat-card-subtitle>{{post.location}}</mat-card-subtitle>
     </mat-card-header>
 
       <img mat-card-image [src]="formatImage(post.image)" alt="post image">
 
-      <video mat-card-video [src]="formatVideo(post.video)" alt="post video">
+      <video controls [src]="formatVideo(post.video)" alt="post video"></video>
 
           <mat-card-subtitle align="start">Posted by {{post.username}}</mat-card-subtitle>
 
@@ -52,8 +52,6 @@
       <mat-hint align="end">{{comment.value.length}} / 128</mat-hint>
     </mat-form-field>
 
-      </video>
-    </mat-card>
   </mat-card>
 </div>
 

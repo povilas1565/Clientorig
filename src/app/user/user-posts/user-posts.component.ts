@@ -91,11 +91,11 @@ export class UserPostsComponent implements OnInit {
     return 'data:image/jpeg;base64,' + img;
   }
 
-  formatVideo(vid: any): any {
-    if (vid == null) {
+  formatVideo(video: any): any {
+    if (video == null) {
       return null;
     }
-    return 'data:video/avi;mp4,' + vid;
+    return 'data:video/mp4;base64,' + video;
   }
 
 }

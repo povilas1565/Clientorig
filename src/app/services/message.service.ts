@@ -11,14 +11,11 @@ export class MessageService {
   }
 
   createMessage(message: any): Observable<any> {
-    return this.httpclient.get( MESSAGE_API + 'create', message);
+    return this.httpclient.post(MESSAGE_API + 'create', message);
   }
 
-  getMessageById(id: number): Observable<any> {
-    return this.httpclient.get( MESSAGE_API + id);
-  }
   getAllMessages(): Observable<any> {
-    return this.httpclient.get( MESSAGE_API + 'all');
+    return this.httpclient.get(MESSAGE_API + 'all');
   }
 
   getMessagesForCurrentUser(): Observable<any> {

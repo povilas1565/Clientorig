@@ -15,7 +15,9 @@
   </mat-card-header>
 
   <img mat-card-image [src]="formatImage(post.image)" alt="post.image" >
-  <video mat-card-video [src]="formatVideo(post.video)" alt="post.video"></video>
+  <video controls [src]="formatVideo(post.video)" alt="post.video">
+  </video>
+
 <mat-card-content>
   <p>
     {{post.caption}}
@@ -35,8 +37,8 @@
     <mat-icon color="warn">delete</mat-icon>
     Delete post
   </button>
-</mat-card-actions>
 
+</mat-card-actions>
   <mat-card-subtitle align="start">Likes: {{post.likes}} <span *ngIf="post.likes > 0"> by {{post.likedUsers}}</span>
   </mat-card-subtitle>
 </mat-card>

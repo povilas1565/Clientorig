@@ -11,12 +11,12 @@
          alt="user image">
 
 
-   <input type="file"
+    <input type="file"
           style="display: none"
           #fileInput
           (change)="onFileSelected($event)">
 
-    <button mat-button (click)="fileInput.click()">Select file</button>
+    <button mat-button (click)="fileInput.click()" type="button">Select file</button>
 
     <mat-form-field class="w-100" appearance="outline">
       <mat-label>Title</mat-label>
@@ -41,5 +41,6 @@
       Create Post
       </button>
    </div>
+
 </form>
 </div>

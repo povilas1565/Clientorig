@@ -9,14 +9,12 @@
   <mat-card-header style="text-align: left">
 
     <div mat-card-avatar class="example-header-image"></div>
-    <div mat-card-avatar class="example-header-video"></div>
     <mat-card-title>{{post.title}}</mat-card-title>
     <mat-card-subtitle> {{post.location}} </mat-card-subtitle>
   </mat-card-header>
 
-  <img mat-card-image [src]="formatImage(post.image)" alt="post.image" >
-  <video controls [src]="formatVideo(post.video)" alt="post.video">
-  </video>
+  <img mat-card-image [src]="formatImage(post.image)" alt="post.image">
+  <video controls [src]="formatVideo(post.video)" alt="post.video"></video>
 
 <mat-card-content>
   <p>
@@ -33,7 +31,7 @@
 </div>
 
 <mat-card-actions align="end">
-  <button color="warn" mat-button (click)="deletePost(post, i)">
+  <button color="warn" mat-button (click) ="deletePost(post, i)">
     <mat-icon color="warn">delete</mat-icon>
     Delete post
   </button>

@@ -104,10 +104,12 @@ export class IndexComponent implements OnInit {
   }
 
 
-
   likePost(postId: number, postIndex: number): void {
     const post = this.posts[postIndex];
     console.log(post);
+
+    console.log('this user: ', this.user);
+    console.log('this.user.username: ', this.user.username);
 
     if (!post.likedUsers?.includes(this.user.username)) {
       this.postService.likePost(postId, this.user.username)
@@ -115,6 +117,7 @@ export class IndexComponent implements OnInit {
           post.likedUsers?.push(this.user.username);
           this.notificationService.showSnackBar("Liked")
         });
+
     } else {
       this.postService.likePost(postId, this.user.username)
         .subscribe(() => {

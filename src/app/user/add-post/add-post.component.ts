@@ -15,7 +15,7 @@ import {Router} from "@angular/router";
 export class AddPostComponent implements OnInit {
 
   public postEditForm: FormGroup;
-  public selectedFile: File;
+  public selectedFile?: File;
   public isPostCreated = false;
   public createdPost: Post;
   public previewImageUrl: any;
@@ -47,30 +47,34 @@ export class AddPostComponent implements OnInit {
       caption: this.postEditForm.value.caption,
       location: this.postEditForm.value.location})
       .subscribe(postData => {
-        this.createdPost = postData;
-        console.log(postData);
+          this.createdPost = postData;
+          console.log(postData);
 
-        if (this.createdPost.id != null) {
-          this.imageService.uploadImgToPost(this.selectedFile, this.createdPost.id)
-            .subscribe(() => {
-              this.notificationService.showSnackBar('Post was created');
-              this.isPostCreated = true;
-              this.router.navigate(['/profile']);
-            });
+          if (this.createdPost.id != null && this.selectedFile?.type) {
+          const type = this.selectedFile.type.split('/')[0];
+          if (type === 'image') {
+            this.imageService.uploadImgToPost(this.selectedFile, this.createdPost.id)
+              .subscribe(() => {
+                this.notificationService.showSnackBar('Post was created');
+                this.isPostCreated = true;
+                this.router.navigate(['/profile']);
+              });
+          }
+            if (type === 'video') {
+              this.videoService.uploadVideoToPost(this.selectedFile, this.createdPost.id)
+                .subscribe(() => {
+                  this.notificationService.showSnackBar('Post was created');
+                  this.isPostCreated = true;
+                  this.router.navigate(['/profile']);
+                });
+            }
+          }
         }
-        else if (this.createdPost.id != null) {
-          this.videoService.uploadVideoToPost(this.selectedFile, this.createdPost.id)
-            .subscribe(() => {
-              this.notificationService.showSnackBar('Post was created');
-              this.isPostCreated = true;
-              this.router.navigate(['/profile']);
-            });
-        }
-      });
+      );
   }
-
-  onFileSelected(event: any): void {
-    this.selectedFile = event.target.files[0];
+  onFileSelected(event: Event): void {
+    const target = event.target as HTMLInputElement;
+    this.selectedFile = target.files[0];
     const reader = new FileReader();
     reader.readAsDataURL(this.selectedFile);
     reader.onload = () => {

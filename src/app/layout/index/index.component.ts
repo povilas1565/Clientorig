@@ -100,7 +100,7 @@ export class IndexComponent implements OnInit {
     if (video == null) {
       return null;
     }
-    return 'data:video/avi;mp4,' + video;
+    return 'data:video/mp4;base64,' + video;
   }
 
 

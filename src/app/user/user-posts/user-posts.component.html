@@ -13,8 +13,8 @@
     <mat-card-subtitle> {{post.location}} </mat-card-subtitle>
   </mat-card-header>
 
-  <img mat-card-image [src]="formatImage(post.image)" alt="post.image">
-  <video controls [src]="formatVideo(post.video)" alt="post.video"></video>
+  <img *ngIf="post.image" mat-card-image [src]="formatImage(post.image)" alt="post.image">
+  <video *ngIf="post.video" controls [src]="formatVideo(post.video)" alt="post.video"></video>
 
 <mat-card-content>
   <p>

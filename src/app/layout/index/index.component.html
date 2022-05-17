@@ -21,9 +21,9 @@
       <mat-card-subtitle>{{post.location}}</mat-card-subtitle>
     </mat-card-header>
 
-      <img mat-card-image [src]="formatImage(post.image)" alt="post image">
+      <img *ngIf="post.image" mat-card-image [src]="formatImage(post.image)" alt="post image">
 
-      <video controls [src]="formatVideo(post.video)" alt="post video"></video>
+      <video *ngIf="post.video" controls [src]="formatVideo(post.video)" alt="post video"></video>
 
           <mat-card-subtitle align="start">Posted by {{post.username}}</mat-card-subtitle>
 

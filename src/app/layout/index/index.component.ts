@@ -117,7 +117,6 @@ export class IndexComponent implements OnInit {
           post.likedUsers?.push(this.user.username);
           this.notificationService.showSnackBar("Liked")
         });
-
     } else {
       this.postService.likePost(postId, this.user.username)
         .subscribe(() => {

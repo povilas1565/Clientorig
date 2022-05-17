@@ -16,7 +16,11 @@ export class UserService {
   }
 
   getCurrentUser(): Observable<any> {
-    return this.httpclient.get(USER_API);
+    const n = this.httpclient.get(USER_API);
+    console.log('this n: ', n);
+    return n;
+
+
   }
 
   updateUser(user: any): Observable<any> {

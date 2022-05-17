@@ -1,14 +1,14 @@
 .index-page {
   display: block;
   margin: 0 auto;
-  width: 60%;
+  width: 50%;
   padding-top: 3rem;
 }
 
 .post-card {
   display: block;
   margin: 2rem auto;
-  width: 80%;
+  width: 50%;
 }
 
 .is-liked {
@@ -21,6 +21,6 @@
 
 .message-card {
   display: block;
-  margin: 3rem auto;
-  width: 80%;
+  margin: 2rem auto;
+  width: 60%;
 }

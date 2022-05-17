@@ -19,6 +19,8 @@ import { AddPostComponent } from './user/add-post/add-post.component';
 import { UserMessagesComponent } from './user/user-messages/user-messages.component';
 import { AddMessageComponent } from './user/add-message/add-message.component';
 import { CommonModule } from '@angular/common';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 
 
 @NgModule({
@@ -44,6 +46,8 @@ import { CommonModule } from '@angular/common';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
+    MatFormFieldModule,
+    MatInputModule
   ],
   providers: [authInterceptorProviders,
     authErrorInterceptorProviders],
